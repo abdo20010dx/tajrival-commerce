@@ -1,9 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatInputModule } from '@angular/material/input';
 import { ActivatedRoute, Router } from '@angular/router';
 
 interface DeviceRecord {
@@ -29,6 +31,8 @@ const devices: DeviceRecord[] = [
   styleUrls: ['./invoice-detail.component.scss'],
   templateUrl: './invoice-detail.component.html',
   imports: [MatFormFieldModule, CommonModule,
+    MatButtonModule,
+    MatInputModule,
     FormsModule,
     MatGridListModule,
     MatCardModule

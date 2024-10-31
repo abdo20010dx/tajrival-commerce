@@ -57,11 +57,13 @@
 
     <!-- Make each row clickable -->
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let element; columns: displayedColumns;" [routerLink]="['/invoices', element.no]" style="cursor: pointer;"></tr>
+    <tr mat-row *matRowDef="let element; columns: displayedColumns;" [routerLink]="['/invoice-detail', element.no]" style="cursor: pointer;"></tr>
   </table>
 
-  <mat-paginator [pageSizeOptions]="[5, 10, 20]"
-                 showFirstLastButtons
-                 aria-label="Select page of device records">
+  <mat-paginator 
+  [pageSizeOptions]="[5, 10, 20]"
+  [pageSize]="10"
+  showFirstLastButtons
+  aria-label="Select page of device records">
   </mat-paginator>
 </div>

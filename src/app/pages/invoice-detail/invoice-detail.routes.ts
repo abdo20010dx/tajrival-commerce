@@ -1,12 +1,12 @@
 import { Routes } from '@angular/router';
 import { InvoiceDetailComponent } from './invoice-detail.component';
 
-export const InvoicesRoutes: Routes = [
+export const InvoiceDetailRoutes: Routes = [
     {
         path: '',
         children: [
             {
-                path: 'invoices/:id',
+                path: 'invoice-detail/:id',
                 component: InvoiceDetailComponent,  // Component to view a single invoice by ID
             },
         ],
