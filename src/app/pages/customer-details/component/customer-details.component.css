@@ -1,0 +1,121 @@
+
+.customer-details-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+  justify-content: flex-start;
+  align-items: stretch; /* Ensure children elements stretch to fill the available space */
+  min-height: 100vh; /* Minimum height to fill the viewport */
+  height: auto; /* Allow the height to adjust based on content */
+  overflow: hidden; /* Prevent overflow of content */
+}
+.flex-end {
+  justify-content: flex-end !important;
+  text-align: left !important;
+}
+.search-section,
+.view-section,
+.insert-section {
+  padding: 20px;
+  width: 100%;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.nowrap-alignment {
+  flex-wrap: nowrap !important;
+}
+
+.flex-item {
+  width: 100%;
+  flex: 1 1 calc(50% - 20px); /* Adjusts to half width minus gap */
+  min-width: 250px; /* Ensures the element does not shrink too much */
+}
+.flex-item-full {
+  width: 100%;
+  flex: 1 1 calc(100% - 20px); /* Adjusts to half width minus gap */
+  min-width: 250px; /* Ensures the element does not shrink too much */
+}
+mat-label::after{
+    content: "  *";
+      white-space: pre; /* Ensures whitespace characters are respected */
+  color: red;
+}
+.full-width {
+  width: 100%;
+}
+.title {
+  font-weight: bolder !important;
+  font-size: larger !important;
+  border-bottom: 2px solid ;
+}
+.field-name {
+  font-weight: bolder !important;
+  color: darkblue;
+  margin-left: 1rem;
+
+}
+span {
+  font-weight: lighter !important;
+  font-size: large;
+}
+mat-label {
+  text-wrap: nowrap;
+  font-weight: bold;
+  font-size: large;
+}
+mat-form-field {
+  font-weight: bold;
+  font-size: large;  
+}
+
+
+.mat-raised-button {
+  /* border-radius: 0; */
+  padding:25px
+}
+
+.row-key {
+   /* border-bottom: 1px solid lightgray; */
+    text-align: start;
+    font-weight: bolder !important;
+    color: darkblue;
+  /* margin-left: 1rem; */
+
+}
+.row-value {
+    text-align: start;
+   /* border-bottom: 1px solid lightgray; */
+    font-weight: lighter !important;
+    font-size: large;
+
+}
+.row-value::before {
+    text-align: start;
+    font-weight: bolder !important;
+    color: darkblue;
+    content: ":  \0009";
+      white-space: pre; /* Ensures whitespace characters are respected */
+}
+td {
+  padding: 8px;
+}
+
+input {
+  font-weight: lighter !important;
+  font-size: large !important;
+}
+
+caption {
+  text-wrap: nowrap;
+  margin-top: 20px;
+  text-decoration: underline;
+}

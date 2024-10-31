@@ -1,0 +1,203 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+* {
+    font-weight: bold !important;
+    font-size: large !important;
+}
+
+
+// .red-border {
+//     border: 1px solid red;
+//   }
+  
+//   .blue-border {
+//     border: 1px solid blue;
+//   }
+  
+//   .vio-border {
+//     border: 1px solid blueviolet;
+//   }
+//   .flex-class{
+//     display: flex; /* Add this to allow the input to span the entire width */
+//     padding-left: 10px;
+//     padding-right: 10px;
+//   }
+//   .flex-class input{
+//     flex: 1;
+//     max-width: 100%; /* Control the maximum width */
+//   }
+//   .wrap-label {
+//     white-space: normal; /* Allow text to wrap */
+//     max-width: 100%; /* Control the maximum width */
+//     font-size: 25px;
+//   }
+//   .formTitle{
+//     color: #2B3674;
+//     font-size: 23px;
+//     font-family: DPoppins-Regular;
+//     margin-right: 40px;
+//     margin-left:40px;
+//   }
+//   :host ::ng-deep .ant-breadcrumb>nz-breadcrumb-item:last-child{
+//     color: #707EAE;
+//   }
+//   .pageTitle{
+//     color: #2B3674;
+//     font-size: 32px;
+//     font-family: DMSans-Bold;
+//     margin: 0px;
+// }
+//   nz-breadcrumb span ,nz-breadcrumb-item{
+//     color: #707EAE;
+//     text-decoration: none; /* Remove underline initially */
+//   }
+  
+//   nz-breadcrumb span:hover, nz-breadcrumb-item:hover {
+//     text-decoration: underline;
+//   }
+//   .search{
+//     background-color: #1A8FCB;
+//     color: white;
+//     width: 150px;
+//     height: 50px !important;
+//     border-radius: 5px;
+//     margin-right: 30px;
+//     margin-left: 30px;
+//     margin-top: 20px;
+//     max-width: 100%; /* Control the maximum width */
+//     position: relative;
+//     left: -410px;
+//   }
+//   .mainSections{
+//     background-color: white;
+//     border-radius: 50px;
+//     margin: 30px 30px 60px 30px;
+//     padding: 50px 40px;
+//     min-height: 250px;
+//     max-width: 100%; /* Control the maximum width */
+//     border-color: #40a9ff;
+//     box-shadow: 0 0 0 2px rgba(24,144,255,.2);
+//   }
+//   .formSections , .dataSection{
+//     background-color: white;
+//     border-radius: 50px;
+//     margin: 30px;
+//     padding: 50px 20px;
+//     min-height: 50px;
+//     border-color: #40a9ff;
+//     box-shadow: 0 0 0 2px rgba(24,144,255,.2);
+//   }
+//   .tip{
+//     color: #707EAE;
+//     font-size: 16px;
+//   }
+//   :host ::ng-deep .mat-mdc-button-persistent-ripple{
+//     width: 280px;
+//     background-color: #1A8FCB;
+//     font-family: Poppins-Regular;
+//     font-size: 15px;
+//     height: 50px;
+//     border-radius: 6px;
+//     margin-left: 10px;
+//     margin-right: 10px;
+//   }
+//   :host ::ng-deep .ant-checkbox-checked .ant-checkbox-inner{
+//     background-color: #1A8FCB;
+//     border-color: #1A8FCB;
+// }
+  
+//   input{
+//     border-radius: 6px;
+//     border: 1px solid #707EAE;
+//     height: 50px;
+//     font-size: 15px;
+//     font-family: Poppins-Regular;
+//     padding-left: 10px;
+//   }
+  
+//   ::ng-deep .ant-modal {
+//   /*  direction: rtl;*/
+//   }
+  
+//   /* Add seperation line in Modal confirmation or Error Message Popup */
+//   :host ::ng-deep .customModalClass .ant-modal-header {
+//     border-bottom: 1px solid #707EAE;
+//     color: red;
+//   }
+  
+//   /* Modify Modal Border shape */
+//   :host ::ng-deep .ant-modal-content {
+//     border-radius: 30px;
+//     border: 2px solid #40a9ff;
+//     box-shadow: 0 0 0 2px rgba(24,144,255,.2);
+//     color: red !important;
+//     font-size: 20px;
+//     direction: rtl;
+//   }
+  
+//   // /::ng-deep .customModalClass .ant-modal-body {
+//   // /*  !* Your styles for the modal content here !/
+//   // /*  color: red !important;*/
+//   // }/
+  
+//   :host ::ng-deep .customModalClass .ant-modal-title {
+//     color: #2B3674;
+//     font-size: 20px;
+//     font-family: DMSans-Bold;
+//     margin: 20px;
+//     border-bottom: 1px solid #707EAE;
+//     padding: 10px;
+//     color: green !important;
+//   }
+//   :host ::ng-deep .ant-modal-close{
+//     padding-bottom: 20px;
+//   }
+  
+  
+//   :host ::ng-deep .ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover {
+//     border-color: transparent;
+   
+//   }
+//   :host ::ng-deep .ant-input-affix-wrapper:hover {
+//     border-color: transparent;
+//   }
+//   :host ::ng-deep .ant-input-affix-wrapper{
+//     border: none;
+//   }
+//   :host ::ng-deep .ant-input-affix-wrapper:focus {
+//     box-shadow: none;
+//   }
+//   :host ::ng-deep .ant-table-wrapper-rtl .ant-table-thead>tr>th, td{
+//     text-align: center;
+//   }
+//   .tableIcon{
+//     width: 30px;
+//   }
+//   :host ::ng-deep .ant-select-item-option-selected:not(.ant-select-item-option-disabled){
+//     background-color: #ccebfb;
+//   }
+//   :host ::ng-deep .ant-form-item{
+//     margin: 10px 0px;
+//   }
+
+
+
+
+
+  .mat-mdc-text-field-wrapper{
+    padding: 7px !important;
+    background-color: rgba(204, 235, 251, .3)  !important;
+  }
+  .mat-mdc-form-field-flex {
+    border-radius: 20px !important;
+  }
+  .mat-mdc-card{
+    border: 2px solid #bde9ff !important;
+    border-radius: 50px !important; 
+  }
+
+  .mat-raised-button {
+    padding: 25px !important;
+  }

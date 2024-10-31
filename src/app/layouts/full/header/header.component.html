@@ -1,0 +1,91 @@
+<mat-toolbar class="topbar">
+  <!-- Mobile Menu -->
+  @if(true) {
+  <button
+    mat-mini-fab
+    color="inherit"
+    (click)="toggleMobileNav.emit()"
+    class="d-flex justify-content-center"
+  >
+    <i
+      class="iconify icon-20 d-flex"
+      data-icon="solar:hamburger-menu-line-duotone"
+    ></i>
+  </button>
+  }
+  <!-- --------------------------------------------------------------- -->
+  <!-- Notification Dropdown -->
+  <!-- --------------------------------------------------------------- -->
+  <!-- <button
+    mat-mini-fab
+    color="inherit"
+    aria-label="Notifications"
+    class="d-flex justify-content-center"
+  >
+    <span  matBadge="1" matBadgeOverlap="false" matBadgeSize="small">
+      <i class="iconify icon-20 d-flex" data-icon="solar:bell-line-duotone"></i>
+    </span>
+  </button>
+ -->
+  <span class="flex-1-auto"></span>
+
+  <!-- <a href="#" target="_blank" mat-flat-button color="primary">Download Free</a> -->
+
+  <!-- --------------------------------------------------------------- -->
+  <!-- profile Dropdown -->
+  <!-- --------------------------------------------------------------- -->
+         {{ name }}
+
+  <!-- <button
+    mat-fab
+    extended
+    color="inherit"
+    [matMenuTriggerFor]="profilemenu"
+    aria-label="Notifications"
+    class="d-flex justify-content-center profile-btn-dd"
+  >
+<mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="person"></mat-icon>
+  </button> -->
+  <mat-menu #profilemenu="matMenu" class="topbar-dd cardWithShadow">
+    <!-- <button mat-menu-item>
+      <mat-icon class="d-flex align-items-center"
+        ><i
+          data-icon="solar:shield-user-line-duotone"
+          class="iconify icon-22"
+        ></i></mat-icon
+      >My Profile
+    </button>
+    <button mat-menu-item>
+      <mat-icon class="d-flex align-items-center"
+        ><i
+          data-icon="solar:user-id-line-duotone"
+          class="iconify icon-22"
+        ></i></mat-icon
+      >My Account
+    </button>
+    <button mat-menu-item>
+      <mat-icon class="d-flex align-items-center"
+        ><i
+          data-icon="solar:checklist-minimalistic-line-duotone"
+          class="iconify icon-22"
+        ></i> </mat-icon
+      >My Task
+    </button> -->
+
+    <div class="p-x-12 m-t-12">
+      رقم الفرع: {{ brCode }}
+    </div>
+    <div class="p-x-12 m-t-12">
+      اسم  المستخدم: {{ name }}
+    </div>
+    <div class="p-x-12 m-t-12">
+      <button
+      (click)="onLogout()"
+        mat-stroked-button
+        color="primary"
+        class="w-100"
+        >تسجيل الخروج</button
+      >
+    </div>
+  </mat-menu>
+</mat-toolbar>

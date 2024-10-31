@@ -1,0 +1,54 @@
+<div class="invoice-detail mat-elevation-z8">
+  <h2>Edit Invoice Details</h2>
+  
+  <form #invoiceForm="ngForm" class="invoice-form">
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>No</mat-label>
+      <input matInput type="number" [(ngModel)]="invoice!.no" name="no" readonly />
+    </mat-form-field>
+    
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Device Name</mat-label>
+      <input matInput type="text" [(ngModel)]="invoice!.deviceName" name="deviceName" />
+    </mat-form-field>
+    
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Code No</mat-label>
+      <input matInput type="text" [(ngModel)]="invoice!.codeNo" name="codeNo" />
+    </mat-form-field>
+    
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Serial No</mat-label>
+      <input matInput type="text" [(ngModel)]="invoice!.serialNo" name="serialNo" />
+    </mat-form-field>
+    
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Invoice No</mat-label>
+      <input matInput type="text" [(ngModel)]="invoice!.invoiceNo" name="invoiceNo" />
+    </mat-form-field>
+    
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Date</mat-label>
+      <input matInput type="text" [(ngModel)]="invoice!.date" name="date" />
+    </mat-form-field>
+    
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Amount</mat-label>
+      <input matInput type="number" [(ngModel)]="invoice!.amount" name="amount" />
+    </mat-form-field>
+    
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Customer No</mat-label>
+      <input matInput type="text" [(ngModel)]="invoice!.customerNo" name="customerNo" />
+    </mat-form-field>
+    
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Notes</mat-label>
+      <input matInput type="text" [(ngModel)]="invoice!.notes" name="notes" />
+    </mat-form-field>
+    
+    <div class="actions">
+      <button mat-raised-button color="primary" (click)="saveInvoice()" type="button">Save</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,67 @@
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" class="clickable-rows">
+
+    <!-- No Column -->
+    <ng-container matColumnDef="no">
+      <th mat-header-cell *matHeaderCellDef> No. </th>
+      <td mat-cell *matCellDef="let element"> {{element.no}} </td>
+    </ng-container>
+
+    <!-- Device Name Column -->
+    <ng-container matColumnDef="deviceName">
+      <th mat-header-cell *matHeaderCellDef> Device Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.deviceName}} </td>
+    </ng-container>
+
+    <!-- Code No Column -->
+    <ng-container matColumnDef="codeNo">
+      <th mat-header-cell *matHeaderCellDef> Code No. </th>
+      <td mat-cell *matCellDef="let element"> {{element.codeNo}} </td>
+    </ng-container>
+
+    <!-- Serial No Column -->
+    <ng-container matColumnDef="serialNo">
+      <th mat-header-cell *matHeaderCellDef> Serial No. </th>
+      <td mat-cell *matCellDef="let element"> {{element.serialNo}} </td>
+    </ng-container>
+
+    <!-- Invoice No Column -->
+    <ng-container matColumnDef="invoiceNo">
+      <th mat-header-cell *matHeaderCellDef> Invoice No. </th>
+      <td mat-cell *matCellDef="let element"> {{element.invoiceNo}} </td>
+    </ng-container>
+
+    <!-- Date Column -->
+    <ng-container matColumnDef="date">
+      <th mat-header-cell *matHeaderCellDef> Date </th>
+      <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+    </ng-container>
+
+    <!-- Amount Column -->
+    <ng-container matColumnDef="amount">
+      <th mat-header-cell *matHeaderCellDef> Amount </th>
+      <td mat-cell *matCellDef="let element"> {{element.amount}} </td>
+    </ng-container>
+
+    <!-- Customer No Column -->
+    <ng-container matColumnDef="customerNo">
+      <th mat-header-cell *matHeaderCellDef> Customer No. </th>
+      <td mat-cell *matCellDef="let element"> {{element.customerNo}} </td>
+    </ng-container>
+
+    <!-- Notes Column -->
+    <ng-container matColumnDef="notes">
+      <th mat-header-cell *matHeaderCellDef> Notes </th>
+      <td mat-cell *matCellDef="let element"> {{element.notes}} </td>
+    </ng-container>
+
+    <!-- Make each row clickable -->
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let element; columns: displayedColumns;" [routerLink]="['/invoices', element.no]" style="cursor: pointer;"></tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                 showFirstLastButtons
+                 aria-label="Select page of device records">
+  </mat-paginator>
+</div>

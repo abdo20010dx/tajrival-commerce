@@ -1,0 +1,19 @@
+<!-- <ng-container *ngIf="(error$ | async) as errorMessage">
+  <span style="display:none;">{{  showError(errorMessage) }}</span>
+</ng-container> -->
+
+<!-- <div *ngIf="(error$ | async) as message"  class="custom-card-container" [ngClass]="{'none': !(error$ | async)}">
+  <mat-card class="custom-card" matElevation="8">
+    <mat-card-title>Important Notification</mat-card-title>
+    <mat-card-content>
+        {{message}}
+    </mat-card-content>
+  </mat-card>
+</div> -->
+
+<div *ngIf="(message$ | async) as message" [ngClass]="(message$ | async) ? 'none' : message.type === 'error' ? 'error' : 'success'"  class="message-container">
+  <h2>{{ message.text }}</h2>
+  
+  <!-- Material Progress Bar at the Bottom (in Query Mode) -->
+  <mat-progress-bar mode="query"></mat-progress-bar>
+</div>

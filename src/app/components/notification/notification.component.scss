@@ -1,0 +1,36 @@
+.message-container {
+  direction: rtl;
+  position: fixed;
+  text-wrap: wrap;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px; /* Fixed width to meet modern UI standards */
+  height: auto; /* Let the height adjust based on the content */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visibility */
+  z-index: 1000;
+  background-color: white;
+}
+
+.success {
+  color: green;
+  background-color: #f5fef5;
+  border: 1px solid green;
+}
+
+.error {
+  color: red;
+  background-color: #f9f7f7;
+  border: 1px solid red;
+}
+
+
+/* Responsive behavior: Adjusts for mobile screens */
+@media (max-width: 600px) {
+  .message-container {
+    width: 90%; /* Take up most of the screen width on mobile */
+    top: 10px; /* Reduce top margin for smaller screens */
+  }
+}

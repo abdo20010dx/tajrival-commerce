@@ -1,0 +1,206 @@
+<div class="customer-details-container" dir="rtl">
+  <!-- Search Section -->
+  <mat-card class="search-section cardWithShadow theme-card">
+    <mat-card-content class="flex-container nowrap-alignment">
+      <mat-label>الرقم القومى</mat-label>
+      <mat-form-field appearance="outline" class="full-width">
+        <input matInput  (keyup.enter)="onSearch()" type="text" [(ngModel)]="idNumber" />
+        <button [disabled]="isEditing" matSuffix  mat-flat-button class="mat-raised-button" color="primary" (click)="onSearch()"> بحث عن عميل</button>
+      </mat-form-field>
+    </mat-card-content>
+  </mat-card>
+  
+  <!-- Error Message -->
+  <!-- <mat-error *ngIf="errorMessage">{{ errorMessage }}</mat-error> -->
+
+  <!-- View Section -->
+  <mat-card *ngIf="fullname" class="view-section cardWithShadow theme-card">
+    <mat-card-header>
+      <mat-card-title  class="title">تفاصيل العميل</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <table>
+        <tr>
+          <td class="row-key">
+            اسم العميل
+          </td>
+          <td class="row-value">
+            {{ fullname }}
+          </td>
+        </tr>
+        <tr>
+          <td class="row-key">
+            الرقم القومى
+          </td>
+          <td class="row-value">
+            {{ idNumber }}
+          </td>
+        </tr>
+
+      </table>
+      <mat-divider></mat-divider>
+      <caption>البيانات الاساسية</caption>
+      <table>
+        <tr>
+          <td class="row-key">
+            عنوان الاقامة
+          </td>
+          <td class="row-value">
+            {{ address1 }}
+          </td>
+        </tr>
+        <tr>
+          <td class="row-key">
+            عنوان النشاط
+          </td>
+          <td class="row-value">
+            {{ address2 }}
+          </td>
+        </tr>
+        <tr>
+          <td class="row-key">
+            رقم الهاتف الاساسى
+          </td>
+          <td class="row-value">
+            {{ phone1 }}
+          </td>
+        </tr>
+        <tr>
+          <td class="row-key">
+            رقم الهاتف الاختيارى
+          </td>
+          <td class="row-value">
+            {{ phone2 }}
+          </td>
+        </tr>
+      </table>  
+      <!-- <mat-divider></mat-divider>     -->
+      <!-- <caption>البيانات الاضافية</caption>
+      <table>
+        <tr>
+          <td class="row-key">
+            عنوان الاقامة
+          </td>
+          <td class="row-value">
+            {{ c_address }}
+          </td>
+        </tr>
+        <tr>
+          <td class="row-key">
+            عنوان النشاط
+          </td>
+          <td class="row-value">
+            {{ a_address }}
+          </td>
+        </tr>
+        <tr>
+          <td class="row-key">
+            رقم الهاتف الاساسى
+          </td>
+          <td class="row-value">
+            {{ c_phone1 }}
+          </td>
+        </tr>
+        <tr>
+          <td class="row-key">
+            رقم الهاتف الاختيارى
+          </td>
+          <td class="row-value">
+            {{ c_phone2 }}
+          </td>
+        </tr>
+      </table> -->
+      
+      <!-- <mat-list> -->
+        <!-- <mat-list-item class="flex-item-view"> -->
+          <!-- <span class="field-name" matLine>اسم العميل:</span> -->
+          <!-- <span class="flex-end" matLine>{{ fullname }}</span> -->
+        <!-- </mat-list-item> -->
+          <!-- <mat-divider class="light-divider"></mat-divider> -->
+        <!-- <mat-list-item class="flex-item-view"> -->
+          <!-- <span class="field-name" matLine>عنوان الاقامة:</span> -->
+          <!-- <span class="flex-end" matLine>{{ residenceAddress }}</span> -->
+        <!-- </mat-list-item> -->
+          <!-- <mat-divider class="light-divider"></mat-divider> -->
+        <!-- <mat-list-item class="flex-item-view">
+          <span matLine>عنوان النشاط:</span>
+          <span matLine>{{ activityAddress }}</span>
+        </mat-list-item> -->
+        <!-- <mat-list-item class="flex-item-view" > -->
+          <!-- <span class="field-name" matLine>رقم الهاتف الاساسى: </span> -->
+          <!-- <span class="flex-end" matLine>{{ phone1 }}</span> -->
+        <!-- </mat-list-item> -->
+          <!-- <mat-divider class="light-divider"></mat-divider> -->
+        <!-- <mat-list-item class="flex-item-view" > -->
+          <!-- <span class="field-name" matLine>رقم الهاتف الاختيارى: </span> -->
+          <!-- <span class="flex-end" matLine>{{ phone2 }}</span> -->
+        <!-- </mat-list-item> -->
+      <!-- </mat-list> -->
+    </mat-card-content>
+
+        <mat-card-header>
+      <mat-card-title class="title" >إدخال بيانات اضافية للعميل</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="flex-container">
+      <div class="flex-item-full">
+        <mat-label>عنوان الاقامة</mat-label>
+        <mat-form-field appearance="outline" class="flex-item-full">
+          <input matInput [(ngModel)]="c_address" />
+        </mat-form-field>
+      </div>
+
+      <div class="flex-item-full">
+
+        <mat-label>عنوان النشاط</mat-label>
+        <mat-form-field appearance="outline"  class="flex-item-full">
+          <input matInput [(ngModel)]="a_address"  />
+        </mat-form-field>
+      </div>
+      <div class="flex-item">
+
+  <mat-label >رقم الهاتف الاساسى</mat-label>
+  <mat-form-field appearance="outline" class="flex-item" >
+    <input matInput [(ngModel)]="phone1" />
+  </mat-form-field>
+</div>
+<div class="flex-item">
+  <mat-label>رقم الهاتف الاختيارى</mat-label>
+
+  <mat-form-field appearance="outline" class="flex-item" >
+    <input matInput [(ngModel)]="phone2" />
+  </mat-form-field>
+</div>
+        <button  [disabled]="isEditing" mat-flat-button class="mat-raised-button" color="primary" (click)="$event.preventDefault();onSave()">حفظ البيانات الاضافية للعميل</button>
+    </mat-card-content>
+
+  </mat-card>
+
+  <!-- Insert Section -->
+  <!-- <mat-card class=" cardWithShadow theme-card">
+    <mat-card-header>
+      <mat-card-title class="title" >إدخال بيانات اضافية للعميل</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="flex-container">
+      <mat-form-field appearance="outline" class="flex-item-full">
+        <mat-label>عنوان الاقامة</mat-label>
+        <input matInput [(ngModel)]="c_address" placeholder="عنوان الاقامة" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline"  class="flex-item-full">
+        <mat-label>عنوان النشاط</mat-label>
+        <input matInput [(ngModel)]="a_address" placeholder="عنوان النشاط" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="flex-item" >
+        <mat-label >رقم الهاتف الاساسى</mat-label>
+        <input matInput [(ngModel)]="phone1"  placeholder="رقم الهاتف الاساسى" />
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="flex-item" >
+        <mat-label>رقم الهاتف الاختيارى</mat-label>
+        <input matInput [(ngModel)]="phone2" placeholder="رقم الهاتف الاختيارى" />
+      </mat-form-field>
+        <button  [disabled]="isEditing" mat-flat-button class="mat-raised-button" color="primary" (click)="$event.preventDefault();onSave()">حفظ البيانات الاضافية للعميل</button>
+    </mat-card-content>
+  </mat-card> -->
+
+</div>
