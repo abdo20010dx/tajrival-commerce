@@ -1,54 +1,54 @@
-<div class="invoice-detail mat-elevation-z8">
-  <h2>Edit Invoice Details</h2>
+<div class="device-detail mat-elevation-z8">
+  <h2>Edit Device Details</h2>
 
-  <form #invoiceForm="ngForm" class="invoice-form">
+  <form #deviceForm="ngForm" class="device-form">
     <mat-form-field appearance="outline" class="full-width">
       <mat-label>No</mat-label>
-      <input matInput type="number" [(ngModel)]="invoice!.no" name="no" readonly />
+      <input matInput type="number" [(ngModel)]="device!.no" name="no" readonly />
     </mat-form-field>
 
     <mat-form-field appearance="outline" class="full-width">
       <mat-label>Device Name</mat-label>
-      <input matInput type="text" [(ngModel)]="invoice!.deviceName" name="deviceName" />
+      <input matInput type="text" [(ngModel)]="device!.deviceName" name="deviceName" />
     </mat-form-field>
 
     <mat-form-field appearance="outline" class="full-width">
       <mat-label>Code No</mat-label>
-      <input matInput type="text" [(ngModel)]="invoice!.codeNo" name="codeNo" />
+      <input matInput type="text" [(ngModel)]="device!.codeNo" name="codeNo" />
     </mat-form-field>
 
     <mat-form-field appearance="outline" class="full-width">
       <mat-label>Serial No</mat-label>
-      <input matInput type="text" [(ngModel)]="invoice!.serialNo" name="serialNo" />
+      <input matInput type="text" [(ngModel)]="device!.serialNo" name="serialNo" />
     </mat-form-field>
 
     <mat-form-field appearance="outline" class="full-width">
-      <mat-label>Invoice No</mat-label>
-      <input matInput type="text" [(ngModel)]="invoice!.invoiceNo" name="invoiceNo" />
+      <mat-label>Device No</mat-label>
+      <input matInput type="text" [(ngModel)]="device!.deviceNo" name="deviceNo" />
     </mat-form-field>
 
     <mat-form-field appearance="outline" class="full-width">
       <mat-label>Date</mat-label>
-      <input matInput type="text" [(ngModel)]="invoice!.date" name="date" />
+      <input matInput type="text" [(ngModel)]="device!.date" name="date" />
     </mat-form-field>
 
     <mat-form-field appearance="outline" class="full-width">
       <mat-label>Amount</mat-label>
-      <input matInput type="number" [(ngModel)]="invoice!.amount" name="amount" />
+      <input matInput type="number" [(ngModel)]="device!.amount" name="amount" />
     </mat-form-field>
 
     <mat-form-field appearance="outline" class="full-width">
       <mat-label>Customer No</mat-label>
-      <input matInput type="text" [(ngModel)]="invoice!.customerNo" name="customerNo" />
+      <input matInput type="text" [(ngModel)]="device!.customerNo" name="customerNo" />
     </mat-form-field>
 
     <mat-form-field appearance="outline" class="full-width">
       <mat-label>Notes</mat-label>
-      <input matInput type="text" [(ngModel)]="invoice!.notes" name="notes" />
+      <input matInput type="text" [(ngModel)]="device!.notes" name="notes" />
     </mat-form-field>
 
     <div class="actions">
-      <button mat-raised-button color="primary" (click)="saveInvoice()" type="button">Save</button>
+      <button mat-raised-button color="primary" (click)="saveDevice()" type="button">Save</button>
     </div>
   </form>
 </div>

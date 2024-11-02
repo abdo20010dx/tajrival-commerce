@@ -88,9 +88,9 @@ export const navItems: NavItem[] = [
     route: '/customers',
   },
   {
-    displayName: 'Invoices',
+    displayName: 'Devices',
     // iconName: 'mdi:card-account-details',
-    route: '/invoices',
+    route: '/devices',
   },
   // {
   //   displayName: 'Sample Page',

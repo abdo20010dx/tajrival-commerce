@@ -27,9 +27,14 @@ import { NgScrollbarModule } from 'ngx-scrollbar';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CookieService } from 'ngx-cookie-service';
 import { MaterialModule } from './material.module';
+import { NgxIndexedDBModule, NgxIndexedDBService, DBConfig } from 'ngx-indexed-db';
+import { dbConfig } from './core/config/dbConfig';
 
 export const appConfig: ApplicationConfig = {
   providers: [
+    { provide: dbConfig, useValue: dbConfig },  // Provide the dbConfig globally
+    NgxIndexedDBService,                         // Provide NgxIndexedDBService globally
+
     // provideExperimentalZonelessChangeDetection(),
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(

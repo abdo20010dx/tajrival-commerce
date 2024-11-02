@@ -19,7 +19,7 @@ export class AuthGuard implements CanActivate {
       // User is logged in
       if (isLoginPage) {
         // Redirect logged-in user away from login page
-        this.router.navigate(['/invoices']); // Redirect to home or any other route
+        this.router.navigate(['/devices']); // Redirect to home or any other route
         return false;
       }
       return true; // Allow access to other routes

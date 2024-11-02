@@ -9,7 +9,7 @@ export const routes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: '/invoices',
+        redirectTo: '/devices',
         pathMatch: 'full',
       },
       // {
@@ -66,8 +66,8 @@ export const routes: Routes = [
       {
         path: '',
         loadChildren: () =>
-          import('./pages/invoices/invoices.routes').then(
-            (m) => m.InvoicesRoutes
+          import('./pages/devices/devices.routes').then(
+            (m) => m.DevicesRoutes
           ),
         // canActivate: [AuthGuard],
       },
@@ -80,8 +80,8 @@ export const routes: Routes = [
       {
         path: '',
         loadChildren: () =>
-          import('./pages/invoice-detail/invoice-detail.routes').then(
-            (m) => m.InvoiceDetailRoutes
+          import('./pages/device-detail/device-detail.routes').then(
+            (m) => m.DeviceDetailRoutes
           ),
         // canActivate: [AuthGuard],
       },

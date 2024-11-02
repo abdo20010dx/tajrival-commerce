@@ -27,7 +27,7 @@ export interface DeviceRecord {
   deviceName: string;
   codeNo: string;
   serialNo: string | null;
-  invoiceNo: string | null;
+  deviceNo: string | null;
   date: string;
   amount: number;
   customerNo: string;
